@@ -1,0 +1,79 @@
+* {
+    border: none;
+    outline: none;
+    --primary-color:  #a8cfd5;
+    --secondary-color: #3e7f88;
+}
+  body {
+    /* background-color: rgb(205 216 228) !important; */
+    background-color: var(--primary-color)!important;
+}
+ 
+  .login-container {
+    height: 700px;
+  }
+  
+  .login-div {
+    width: 30%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 50px 35px;
+  }
+  input {
+    width: 100%;
+    border-bottom: 1px solid rgb(151, 149, 149);
+  }
+  button {
+    width: 70%;
+  }
+  
+  .login-title ,.Registration-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+    color: var(--secondary-color);
+    /* border-bottom: 1px solid rgb(224, 217, 217);
+    padding: 0 50px; */
+  }
+  .username ,  .password,.userEmail {
+    margin: 20px 0;
+  }
+ 
+  .login-div a {
+    text-decoration: none;
+  }
+  .login-button-div {
+    display: flex;
+    justify-content: center;
+    /* width: 270px; */
+    margin-top: 40px;
+  }
+  
+  .login-button , .create-button,.modal-Submit{
+    padding: 6px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 4px;
+  }
+  .modal-Submit{
+    width: 4rem;
+  }
+
+  .createACT-text, .haveACT-text{
+    text-align: center;
+    font-size: .85rem;
+  }
+  .a-tag{
+    cursor: pointer;
+  color: var(--secondary-color);
+  }
+  .a-tag:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+
+  /* OTP */
+  .userOtp{
+    width: 60%;
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div
+      class="container login-container d-flex justify-content-center align-items-center"  
+    >
+       
+      <div class="login-div">
+        <div class="Registration-title d-none"><h3>Registration</h3></div>
+        <div class="login-title"><h3>login</h3></div>
+        <div class="username">
+          <label for="uname"><b>Username</b></label
+          ><br />
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+            id="userName"
+
+          />
+        </div>
+        <div class="userEmail d-none">
+            <label for="uname"><b>Email</b></label
+            ><br />
+            <input
+              type="email"
+              placeholder="Enter email"
+              name="email"
+              required
+              id="email"
+  
+            />
+          </div>
+
+        <div class="password">
+          <label for="psw"><b>Password</b></label
+          ><br />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+            id="password"
+          />
+        </div>
+
+        <a href="">
+          <div class="login-button-div">
+            <button class="login-button"  data-bs-toggle="modal" data-bs-target="#exampleModal" id="loginClick" type="submit" >log in</button>      
+            <button class="create-button d-none" id="CreateClick" type="submit ">Create</button>    
+          </div></a
+        >
+        <span class="createACT-text mt-1">Don't have an account?<a class="a-tag" onclick="createACT()"> create an account</a></span>
+        <span class="haveACT-text mt-1 d-none" >Have an account?<a class="a-tag" onclick="haveACT()"> login</a></span>
+             
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header border-none d-flex justify-content-center">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">OTP</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="OTP d-flex justify-content-center">
+            
+              
+                <input
+                class="userOtp"
+                  type="text"
+                  placeholder="Enter OTP"
+                  name="uname"
+                  required
+                  id="userOtp"
+      
+                />
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center   border-none">
+  
+              <button type="button" class="modal-Submit"  data-bs-dismiss="modal" onclick="modalSubmit()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>  
+ 
+
+
+ 
+   
+    <script src="/js/index.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+ 
+</html>
