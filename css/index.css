@@ -3,11 +3,16 @@
     outline: none;
     --primary-color:  #a8cfd5;
     --secondary-color: #3e7f88;
+    /* --primary-color: #DCF2F1;
+    --secondary-color: #3e7f88; */
 }
   body {
     /* background-color: rgb(205 216 228) !important; */
-    background-color: var(--primary-color)!important;
+    /* background-color: var(--primary-color)!important; */
 }
+ .body-login{
+  background-color: var(--primary-color)!important;
+ }
  
   .login-container {
     height: 700px;

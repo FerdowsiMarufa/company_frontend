@@ -117,6 +117,7 @@ function createUser(event) {
       console.log(" login data ", data);
       let userData = data;
       localStorage.setItem("userId" ,userData.id )
+      localStorage.setItem("userRole", userData.role)
         // Show the modal after successful login
        document.querySelector("#modalButton").addEventListener("click", modalshow())
       // console.log("Encrypted User Code:", data.encryptedUserCode);
@@ -144,29 +145,29 @@ function createUser(event) {
       OTP: OTP,
     };
     console.log(" otpVerificationDto",otpVerificationDto)
-      // Make a POST request to the login endpoint
-  fetch("https://localhost:7191/api/User/checkotp", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(otpVerificationDto) 
+  // Make a POST request to the login endpoint
+  // fetch("https://localhost:7191/api/User/checkotp", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(otpVerificationDto) 
    
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("wrong otp");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log(" valid otp ", data);
+  // })
+  //   .then((response) => {
+  //     if (!response.ok) {
+  //       throw new Error("wrong otp");
+  //     }
+  //     return response.json();
+  //   })
+  //   .then((data) => {
+  //     console.log(" valid otp ", data);
      
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-     // alert("Login Failed! Invalid Username or Password!");
-     // localStorage.removeItem("loginTime");
-    });
-
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error:", error);
+  //    // alert("Login Failed! Invalid Username or Password!");
+  //    // localStorage.removeItem("loginTime");
+  //   });
+    window.location.href = "createCertificate.html";
   }
